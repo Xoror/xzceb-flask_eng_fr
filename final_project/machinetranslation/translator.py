@@ -5,7 +5,7 @@ Created on Fri Jan 20 12:43:58 2023
 @author: cinde
 """
 
-import json
+#import json
 import os
 from ibm_watson import LanguageTranslatorV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
@@ -13,8 +13,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-#apikey = os.environ['apikey']
-#url = os.environ['url']
+apikey = os.environ['apikey']
+url = os.environ['url']
 APIKEY='0jt0BsC0R06lNwQLt3pgt99UUf8FbSACm6oomh6TVYFs'
 URL='https://api.au-syd.language-translator.watson.cloud.ibm.com/instances/7846f77c-831c-4b71-a9aa-49b358065bdf'
 

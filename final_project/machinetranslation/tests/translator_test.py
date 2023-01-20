@@ -5,17 +5,21 @@ Created on Fri Jan 20 13:02:54 2023
 @author: cinde
 """
 
-from pylab import *
 import unittest
 from translator import english_to_french, french_to_english
 
-class test_frenchToEnglich(unittest.TestCase):
+class TestFrenchToEnglich(unittest.TestCase):
+    "This class contains the test function for testing the eng-fr translation"
     def test1(self):
-        self.assertEqual(englishToFrench("Hello"),"Bonjour")
-        self.assertIsNone(englishToFrench("Hello"))
-class test_englishToFrench(unittest.TestCase):
+        "test the en-fr translation"
+        self.assertEqual(english_to_french("Hello"),"Bonjour")
+        self.assertNotEqual(english_to_french("Hello"),"Adieu")
+
+class TestEnglishToFrench(unittest.TestCase):
+    "This class contains the test function for testing the fr-en translation"
     def test1(self):
-        self.assertEqual(frenchToEnglish("Bonjour"),"Hello")
-        self.assertIsNone(frenchToEnglish("Bonjour"))
+        "test the fr-en translation"
+        self.assertEqual(french_to_english("Bonjour"),"Hello")
+        self.assertNotEqual(french_to_english("Adieu"),"Hello")
 
 unittest.main()
